@@ -1,0 +1,18 @@
+{
+  "name": "bookmygig-backend",
+  "version": "1.0.0",
+  "description": "NodeJS backend for bookmygig",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Manoj Naidu",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node-media-server": "^2.1.9",
+    "nodemon": "^2.0.4",
+    "redis": "^3.0.2"
+  }
+}
