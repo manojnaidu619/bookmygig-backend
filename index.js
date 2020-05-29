@@ -18,7 +18,15 @@ const getKeys = (key) => {
 }
 
 io.on('connection', (socket) => {
-    console.log('user connected');
+    socket.on('chat-join', ({room, msg}) => {
+        socket.join(room)
+        io.in(room).emit('add-chat-join', msg);
+    })
+
+    socket.on('chat-text', ({ room, msg }) => {
+        socket.join(room)
+        io.in(room).emit('add-chat-text', msg);
+    })
 });
 
 app.use(function(req, res, next) {
