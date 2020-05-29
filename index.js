@@ -23,9 +23,9 @@ io.on('connection', (socket) => {
         io.in(room).emit('add-chat-join', msg);
     })
 
-    socket.on('chat-text', ({ room, msg }) => {
+    socket.on('chat-text', ({ room, msg, user }) => {
         socket.join(room)
-        io.in(room).emit('add-chat-text', msg);
+        io.in(room).emit('add-chat-text', { msg, user });
     })
 });
 
