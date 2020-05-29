@@ -3,6 +3,8 @@ const redis = require("redis");
 const bodyParser = require('body-parser')
 const client = redis.createClient();
 const mediaServer = require('./media-server/MediaServer')
+var http = require('http').createServer(app);
+var io = require('socket.io')(http);
 const port = 5000
 
 app.use(bodyParser.json())
@@ -14,6 +16,10 @@ const getKeys = (key) => {
         })
     })
 }
+
+io.on('connection', (socket) => {
+    console.log('user connected');
+});
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); 
@@ -59,4 +65,4 @@ app.get('/get-gig/:id', (req, res, next) => {
     })
 })
 
-app.listen(port, () => console.log("Backend Listening at ",port))
+http.listen(port, () => console.log("Backend Listening at ",port))
