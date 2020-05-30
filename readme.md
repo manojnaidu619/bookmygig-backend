@@ -25,7 +25,7 @@ This is a platform where creators perform live online shows (like dance, comedy,
 * Figuring out a way to load & play the live stream on the browser without clashing between other sessions was really challenging.
 
 ### How to Setup
-> Checkout frontend [here](https://github.com/manojnaidu619/bookmygig-frontend)
+> Also checkout frontend [here](https://github.com/manojnaidu619/bookmygig-frontend)
 * Download the repo as zip-file
 * unzip it and `cd` into project folder
 * `npm install`
