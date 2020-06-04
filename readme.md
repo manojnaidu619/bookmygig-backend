@@ -8,8 +8,6 @@
 
 This is a platform where creators perform live online shows (like dance, comedy, plays, and the list goes on...) for live audiences. There is also a chat feature, where the users who are part of the same show can chat in realtime while they are watching it.
 
-[Checkout the demo here](https://youtu.be/dG-Yic-VWQ4)
-
 ## Built using
 
 * [ReactJS](https://reactjs.org/)
@@ -17,6 +15,7 @@ This is a platform where creators perform live online shows (like dance, comedy,
 * [Redis](https://redis.io/) as an in-memory database
 * [Node-Media-Server](https://github.com/illuspas/Node-Media-Server) for video streaming
 * [Socket.io](https://socket.io/) for realtime-chat
+* [Web Monetization API](https://webmonetization.org/) + [Coil](https://coil.com/) for monetizing content
  
 ## Challenges I ran into
 
