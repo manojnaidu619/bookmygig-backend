@@ -51,7 +51,7 @@ app.get('/', (req, res, next) => {
 })
 
 app.post('/creator', (req, res, next) => {
-    client.flushall()
+    //client.flushall()
     if (req.body) {
         const dataObject = req.body
         const hashKey = dataObject["user_id"].toString()
